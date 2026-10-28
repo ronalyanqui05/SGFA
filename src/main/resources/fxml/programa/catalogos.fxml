@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="pe.edu.sgfa.programa.ui.CatalogosController"
+         fx:id="tabPane"
+         tabClosingPolicy="UNAVAILABLE"
+         prefWidth="860" prefHeight="580">
+    <tabs>
+        <Tab text="Programas">
+            <fx:include fx:id="programasTab" source="programas-tab.fxml"/>
+        </Tab>
+        <Tab text="Planes">
+            <fx:include fx:id="planesTab" source="planes-tab.fxml"/>
+        </Tab>
+        <Tab text="Ciclos">
+            <fx:include fx:id="ciclosTab" source="ciclos-tab.fxml"/>
+        </Tab>
+        <Tab text="Cursos">
+            <fx:include fx:id="cursosTab" source="cursos-tab.fxml"/>
+        </Tab>
+        <Tab text="Cursos por ciclo">
+            <fx:include fx:id="planCursosTab" source="plan-cursos-tab.fxml"/>
+        </Tab>
+        <Tab text="Periodos">
+            <fx:include fx:id="periodosTab" source="periodos-tab.fxml"/>
+        </Tab>
+    </tabs>
+</TabPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.ocr.ui.OcrReporteController"
+            prefWidth="1150" prefHeight="760">
+    <top>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="16" right="16" bottom="8" left="16"/>
+            </padding>
+            <Label text="Importar reporte de calificaciones de un estudiante (OCR)" styleClass="section-label"/>
+            <Label text="Foto o escaneo de un reporte con los datos del estudiante y sus cursos por nombre. Si el estudiante ya esta registrado, solo se agregan las notas al ciclo y periodo indicados; si no, se registra primero. Revise todo antes de guardar."
+                   wrapText="true" styleClass="subtitle-label"/>
+        </VBox>
+    </top>
+    <left>
+        <VBox spacing="8" prefWidth="270">
+            <padding>
+                <Insets top="6" right="12" bottom="10" left="16"/>
+            </padding>
+            <HBox spacing="6">
+                <Button text="Elegir imagen" onAction="#onElegirImagen"/>
+                <Button text="Rotar 90°" onAction="#onRotar"/>
+            </HBox>
+            <ScrollPane prefHeight="470" fitToWidth="true">
+                <ImageView fx:id="previewImageView" fitWidth="240" preserveRatio="true"/>
+            </ScrollPane>
+            <Button fx:id="reconocerButton" text="Reconocer reporte" onAction="#onReconocer" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="6" right="16" bottom="6" left="6"/>
+            </padding>
+            <GridPane hgap="8" vgap="6">
+                <Label text="N° matricula (DNI)" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="matriculaField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label text="Apellido paterno" styleClass="field-label" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <TextField fx:id="paternoField" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                <Label text="Apellido materno" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="maternoField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label text="Nombres" styleClass="field-label" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <TextField fx:id="nombresField" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                <Label text="Programa" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <ComboBox fx:id="programaCombo" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Label text="Plan" styleClass="field-label" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <ComboBox fx:id="planCombo" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+                <Label text="Ciclo" styleClass="field-label" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <ComboBox fx:id="cicloCombo" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <Label text="Periodo" styleClass="field-label" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                <ComboBox fx:id="periodoCombo" maxWidth="Infinity" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+            </GridPane>
+            <Label fx:id="estadoEstudianteLabel" wrapText="true" styleClass="field-label"/>
+            <TableView fx:id="tabla" editable="true" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="6" right="16" bottom="16" left="16"/>
+            </padding>
+            <TextArea fx:id="resultadoArea" editable="false" prefHeight="110" wrapText="true"/>
+            <HBox spacing="8" alignment="CENTER_RIGHT">
+                <Button text="Agregar curso" onAction="#onAgregarFila"/>
+                <Button text="Guardar" onAction="#onGuardar" defaultButton="true"/>
+                <Button text="Cerrar" onAction="#onCerrar"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

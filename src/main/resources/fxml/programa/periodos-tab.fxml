@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.periodo.ui.PeriodosTabController">
+    <padding>
+        <Insets top="12" right="12" bottom="12" left="12"/>
+    </padding>
+    <center>
+        <TableView fx:id="tabla">
+            <columns>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="120"/>
+                <TableColumn fx:id="colAnio" text="Anio" prefWidth="70"/>
+                <TableColumn fx:id="colTipo" text="Tipo" prefWidth="80"/>
+                <TableColumn fx:id="colFechas" text="Vigencia" prefWidth="180"/>
+                <TableColumn fx:id="colEstado" text="Estado" prefWidth="90"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="8">
+            <padding>
+                <Insets top="12"/>
+            </padding>
+            <Button text="Nuevo" onAction="#onNuevo"/>
+            <Button text="Editar" onAction="#onEditar"/>
+            <Button text="Cerrar periodo" onAction="#onCerrar"/>
+        </HBox>
+    </bottom>
+</BorderPane>

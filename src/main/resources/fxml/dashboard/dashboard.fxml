@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.dashboard.ui.DashboardController"
+            styleClass="dash-root"
+            stylesheets="@/css/dashboard.css"
+            prefWidth="1100" prefHeight="700">
+    <left>
+        <VBox styleClass="dash-sidebar" prefWidth="236" spacing="6">
+            <padding>
+                <Insets top="24" right="16" bottom="20" left="16"/>
+            </padding>
+            <HBox styleClass="dash-marca" alignment="CENTER_LEFT" spacing="12">
+                <StackPane fx:id="marcaLogo" styleClass="dash-marca-logo">
+                    <Label fx:id="marcaLetra" text="S" styleClass="dash-marca-logo-letra"/>
+                    <ImageView fx:id="marcaImagen" fitWidth="46" fitHeight="46" preserveRatio="true" smooth="true"
+                               visible="false" managed="false"/>
+                </StackPane>
+                <VBox spacing="1">
+                    <Label text="SGFA" styleClass="dash-brand"/>
+                    <Label text="FICHAS ACADEMICAS" styleClass="dash-brand-sub"/>
+                </VBox>
+            </HBox>
+            <Region prefHeight="10"/>
+            <Label text="NAVEGACION" styleClass="dash-nav-title"/>
+            <Button fx:id="estudiantesButton" text="◈   Estudiantes" onAction="#onEstudiantes" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Button fx:id="catalogosButton" text="▤   Catalogos academicos" onAction="#onCatalogosAcademicos" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Button fx:id="importarButton" text="⇪   Importar desde Excel" onAction="#onImportarExcel" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Button fx:id="meritoButton" text="★   Orden de merito" onAction="#onOrdenMerito" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Button fx:id="reportesButton" text="▦   Reportes" onAction="#onReportes" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Label fx:id="adminTitle" text="ADMINISTRACION" styleClass="dash-nav-title"/>
+            <Button fx:id="usuariosButton" text="☰   Gestionar usuarios" onAction="#onGestionarUsuarios" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Button fx:id="institucionButton" text="⌂   Configuracion institucion" onAction="#onConfigurarInstitucion" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Button fx:id="backupButton" text="⟳   Respaldo y restauracion" onAction="#onRespaldo" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Button fx:id="auditoriaButton" text="◉   Auditoria" onAction="#onAuditoria" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button fx:id="temaButton" onAction="#onAlternarTema" styleClass="dash-nav-button" maxWidth="Infinity"/>
+            <Button text="⏻   Cerrar sesion" onAction="#onLogout" styleClass="dash-logout-button" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="18">
+            <padding>
+                <Insets top="26" right="32" bottom="26" left="32"/>
+            </padding>
+            <HBox alignment="CENTER_LEFT" spacing="14">
+                <Button fx:id="volverButton" text="←  Volver" onAction="#onVolver" styleClass="dash-back-button"
+                        visible="false" managed="false"/>
+                <VBox spacing="3">
+                    <Label fx:id="institucionLabel" styleClass="dash-title"/>
+                    <Label fx:id="sesionLabel" styleClass="dash-subtitle"/>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label text="● SISTEMA EN LINEA" styleClass="dash-status"/>
+            </HBox>
+            <StackPane fx:id="contenido" VBox.vgrow="ALWAYS">
+                <VBox fx:id="inicioBox" styleClass="dash-home" spacing="26">
+                    <VBox spacing="12">
+                        <Label text="RESUMEN GENERAL" styleClass="dash-section"/>
+                        <HBox fx:id="tarjetasBox" spacing="16"/>
+                    </VBox>
+                    <VBox spacing="12">
+                        <Label text="ACCESOS RAPIDOS" styleClass="dash-section"/>
+                        <FlowPane hgap="16" vgap="16">
+                            <Button onAction="#onEstudiantes" styleClass="dash-tile" text="Estudiantes&#10;Consultar y gestionar fichas"/>
+                            <Button onAction="#onCatalogosAcademicos" styleClass="dash-tile" text="Catalogos&#10;Programas, planes y cursos"/>
+                            <Button onAction="#onImportarExcel" styleClass="dash-tile" text="Importacion masiva&#10;Estudiantes, notas e historico"/>
+                        </FlowPane>
+                    </VBox>
+                </VBox>
+            </StackPane>
+        </VBox>
+    </center>
+</BorderPane>

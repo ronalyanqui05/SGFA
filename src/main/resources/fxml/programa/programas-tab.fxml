@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.programa.ui.ProgramasTabController">
+    <padding>
+        <Insets top="12" right="12" bottom="12" left="12"/>
+    </padding>
+    <center>
+        <TableView fx:id="tabla">
+            <columns>
+                <TableColumn fx:id="colCodigo" text="Codigo" prefWidth="100"/>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="280"/>
+                <TableColumn fx:id="colDuracion" text="Ciclos" prefWidth="70"/>
+                <TableColumn fx:id="colEstado" text="Estado" prefWidth="90"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="8">
+            <padding>
+                <Insets top="12"/>
+            </padding>
+            <Button text="Nuevo" onAction="#onNuevo"/>
+            <Button text="Editar" onAction="#onEditar"/>
+            <Button text="Activar/Desactivar" onAction="#onToggleActivo"/>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,209 @@
+.dash-root {
+    -fx-background-color: -sgfa-bg-subtle;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+}
+
+.dash-sidebar {
+    -fx-background-color: -sgfa-bg-default;
+    -fx-border-color: transparent -sgfa-border-muted transparent transparent;
+    -fx-border-width: 0 1 0 0;
+    -fx-spacing: 6;
+}
+
+.dash-marca-logo {
+    -fx-background-color: -sgfa-accent-emphasis;
+    -fx-background-radius: 11;
+    -fx-min-width: 38;
+    -fx-min-height: 38;
+    -fx-max-width: 38;
+    -fx-max-height: 38;
+}
+
+.dash-marca-logo-imagen {
+    -fx-background-color: transparent;
+    -fx-min-width: 46;
+    -fx-min-height: 46;
+    -fx-max-width: 46;
+    -fx-max-height: 46;
+}
+
+.dash-root .dash-marca-logo-letra {
+    -fx-text-fill: -sgfa-fg-emphasis;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.dash-root .dash-brand {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -sgfa-fg-default;
+}
+
+.dash-root .dash-brand-sub {
+    -fx-font-size: 9.5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -sgfa-fg-subtle;
+}
+
+.dash-root .dash-nav-title {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -sgfa-fg-subtle;
+    -fx-padding: 12 0 3 12;
+}
+
+.dash-nav-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 9;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-insets: 0;
+    -fx-border-radius: 9;
+    -fx-text-fill: -sgfa-fg-muted;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 9 12 9 10;
+    -fx-font-size: 13.5px;
+    -fx-cursor: hand;
+}
+
+.dash-nav-button:hover {
+    -fx-background-color: -sgfa-bg-subtle;
+    -fx-text-fill: -sgfa-fg-default;
+}
+
+.dash-nav-button:pressed {
+    -fx-background-color: -sgfa-accent-subtle;
+}
+
+.dash-nav-button-active,
+.dash-nav-button-active:hover {
+    -fx-background-color: -sgfa-accent-subtle;
+    -fx-border-color: transparent transparent transparent -sgfa-accent-fg;
+    -fx-text-fill: -sgfa-accent-fg;
+    -fx-font-weight: bold;
+}
+
+.dash-logout-button {
+    -fx-background-color: -sgfa-danger-subtle;
+    -fx-background-radius: 9;
+    -fx-border-color: -sgfa-danger-fg;
+    -fx-border-radius: 9;
+    -fx-text-fill: -sgfa-danger-fg;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 9 12 9 12;
+    -fx-cursor: hand;
+}
+
+.dash-logout-button:hover {
+    -fx-background-color: derive(-sgfa-danger-subtle, -10%);
+}
+
+.dash-root .dash-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -sgfa-fg-default;
+}
+
+.dash-root .dash-subtitle {
+    -fx-font-size: 12.5px;
+    -fx-text-fill: -sgfa-fg-muted;
+}
+
+.dash-root .dash-status {
+    -fx-font-size: 10.5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -sgfa-success-fg;
+    -fx-background-color: -sgfa-success-subtle;
+    -fx-background-radius: 20;
+    -fx-padding: 4 12 4 12;
+}
+
+.dash-root .dash-section {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -sgfa-fg-subtle;
+}
+
+.dash-card {
+    -fx-background-color: -sgfa-bg-default;
+    -fx-background-radius: 16;
+    -fx-border-color: -sgfa-border-muted;
+    -fx-border-radius: 16;
+    -fx-padding: 20 22 18 22;
+    -fx-effect: dropshadow(gaussian, -sgfa-shadow, 14, 0, 0, 3);
+}
+
+.dash-card:hover {
+    -fx-border-color: -sgfa-accent-muted;
+}
+
+.dash-kpi-icon {
+    -fx-background-color: -sgfa-accent-subtle;
+    -fx-background-radius: 10;
+    -fx-min-width: 36;
+    -fx-min-height: 36;
+    -fx-max-width: 36;
+    -fx-max-height: 36;
+    -fx-alignment: CENTER;
+}
+
+.dash-root .dash-kpi-icon-glyph {
+    -fx-text-fill: -sgfa-accent-fg;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.dash-root .dash-kpi-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -sgfa-fg-default;
+}
+
+.dash-root .dash-kpi-title {
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -sgfa-fg-muted;
+}
+
+.dash-tile {
+    -fx-background-color: -sgfa-bg-default;
+    -fx-background-radius: 16;
+    -fx-border-color: -sgfa-border-muted;
+    -fx-border-radius: 16;
+    -fx-text-fill: -sgfa-fg-default;
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-alignment: LEFT;
+    -fx-font-size: 13px;
+    -fx-padding: 20 26 20 22;
+    -fx-min-width: 230;
+    -fx-cursor: hand;
+}
+
+.dash-tile:hover {
+    -fx-background-color: -sgfa-accent-subtle;
+    -fx-border-color: -sgfa-accent-muted;
+}
+
+.dash-view-card {
+    -fx-background-color: -sgfa-bg-default;
+    -fx-background-radius: 16;
+    -fx-border-color: -sgfa-border-muted;
+    -fx-border-radius: 16;
+    -fx-effect: dropshadow(gaussian, -sgfa-shadow, 16, 0, 0, 4);
+}
+
+.dash-back-button {
+    -fx-background-color: -sgfa-accent-subtle;
+    -fx-background-radius: 9;
+    -fx-border-color: -sgfa-accent-muted;
+    -fx-border-radius: 9;
+    -fx-text-fill: -sgfa-accent-fg;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+}
+
+.dash-back-button:hover {
+    -fx-background-color: derive(-sgfa-accent-subtle, 20%);
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.programa.ui.CiclosTabController">
+    <padding>
+        <Insets top="12" right="12" bottom="12" left="12"/>
+    </padding>
+    <top>
+        <HBox spacing="8" alignment="CENTER_LEFT">
+            <Label text="Programa:"/>
+            <ComboBox fx:id="programaCombo" prefWidth="240"/>
+            <Label text="Plan:"/>
+            <ComboBox fx:id="planCombo" prefWidth="240"/>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="tabla">
+            <columns>
+                <TableColumn fx:id="colNumero" text="N°" prefWidth="50"/>
+                <TableColumn fx:id="colNombre" text="Nombre" prefWidth="260"/>
+                <TableColumn fx:id="colOrden" text="Orden" prefWidth="70"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="8">
+            <padding>
+                <Insets top="12"/>
+            </padding>
+            <Button text="Nuevo" onAction="#onNuevo"/>
+            <Button text="Editar" onAction="#onEditar"/>
+            <Button text="Eliminar" onAction="#onEliminar" styleClass="button-danger"/>
+        </HBox>
+    </bottom>
+</BorderPane>

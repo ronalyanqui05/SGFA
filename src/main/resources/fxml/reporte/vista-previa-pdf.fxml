@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import pe.edu.sgfa.shell.VisorPdf?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.reporte.ui.VistaPreviaPdfController"
+            prefWidth="1000" prefHeight="720">
+    <top>
+        <Label text="Use la barra para paginar, hacer zoom (tambien Ctrl + rueda del raton), imprimir (Ctrl+P) o guardar una copia (Ctrl+S)."
+               wrapText="true" styleClass="subtitle-label">
+            <BorderPane.margin>
+                <Insets top="6" right="12" bottom="6" left="12"/>
+            </BorderPane.margin>
+        </Label>
+    </top>
+    <center>
+        <VisorPdf fx:id="visor"/>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="8">
+            <padding>
+                <Insets top="8" right="12" bottom="8" left="12"/>
+            </padding>
+            <Button text="Cerrar" onAction="#onCerrar"/>
+        </HBox>
+    </bottom>
+</BorderPane>

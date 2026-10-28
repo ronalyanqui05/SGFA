@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.reporte.ui.ReportesController"
+            prefWidth="1250" prefHeight="760">
+    <top>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="16" right="16" bottom="8" left="16"/>
+            </padding>
+            <Label text="Centro de reportes" styleClass="section-label"/>
+            <Label text="Reportes internos sobre las notas cargadas. Elija el reporte y los filtros, pulse Generar y exporte a Excel o PDF. Se aprueba un curso con nota 11 o mas; se promueve con el 75% o mas de los creditos del ciclo aprobados."
+                   wrapText="true" styleClass="subtitle-label"/>
+            <FlowPane hgap="10" vgap="8" alignment="CENTER_LEFT">
+                <VBox spacing="2">
+                    <Label text="Reporte" styleClass="field-label"/>
+                    <ComboBox fx:id="reporteCombo" prefWidth="290"/>
+                </VBox>
+                <VBox spacing="2">
+                    <Label text="Programa" styleClass="field-label"/>
+                    <ComboBox fx:id="programaCombo" prefWidth="300"/>
+                </VBox>
+                <VBox spacing="2">
+                    <Label text="Plan" styleClass="field-label"/>
+                    <ComboBox fx:id="planCombo" prefWidth="190"/>
+                </VBox>
+                <VBox spacing="2">
+                    <Label text="Ciclo" styleClass="field-label"/>
+                    <HBox spacing="6" alignment="CENTER_LEFT">
+                        <ComboBox fx:id="cicloCombo" prefWidth="170"/>
+                        <CheckBox fx:id="todosCiclosCheck" text="Todos"/>
+                    </HBox>
+                </VBox>
+                <VBox spacing="2">
+                    <Label text="Periodo" styleClass="field-label"/>
+                    <ComboBox fx:id="periodoCombo" prefWidth="130"/>
+                </VBox>
+                <VBox spacing="2">
+                    <Label text=" "/>
+                    <Button fx:id="generarButton" text="Generar" onAction="#onGenerar" defaultButton="true"/>
+                </VBox>
+            </FlowPane>
+            <HBox fx:id="opcionesMeritoBox" spacing="10" alignment="CENTER_LEFT">
+                <VBox spacing="2">
+                    <Label text="Orden de merito sobre" styleClass="field-label"/>
+                    <ComboBox fx:id="ambitoCombo" prefWidth="330"/>
+                </VBox>
+                <VBox spacing="2">
+                    <Label text="Mostrar solo los primeros N puestos (vacio = todos)" styleClass="field-label"/>
+                    <TextField fx:id="limiteField" prefWidth="80" promptText="ej. 3"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="6">
+            <padding>
+                <Insets top="4" right="16" bottom="4" left="16"/>
+            </padding>
+            <Label fx:id="tituloLabel" styleClass="field-label" wrapText="true"/>
+            <TableView fx:id="tabla" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox spacing="6">
+            <padding>
+                <Insets top="6" right="16" bottom="16" left="16"/>
+            </padding>
+            <Label fx:id="estadoLabel" styleClass="subtitle-label" wrapText="true"/>
+            <HBox spacing="8" alignment="CENTER_RIGHT">
+                <Button text="Documentos emitidos" onAction="#onDocumentosEmitidos"/>
+                <Button fx:id="vistaPreviaButton" text="Vista previa" onAction="#onVistaPrevia"/>
+                <Button fx:id="oficialButton" text="Emitir version oficial (para firma)" onAction="#onEmitirOficial"/>
+                <Button fx:id="excelButton" text="Exportar a Excel" onAction="#onExportarExcel"/>
+                <Button fx:id="pdfButton" text="Exportar a PDF (interno)" onAction="#onExportarPdf"/>
+                <Button text="Cerrar" onAction="#onCerrar"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.ocr.ui.OcrActaController"
+            prefWidth="1100" prefHeight="720">
+    <top>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="16" right="16" bottom="10" left="16"/>
+            </padding>
+            <Label text="Importar acta consolidada (OCR)" styleClass="section-label"/>
+            <Label text="Los cursos deben existir antes en Catalogos academicos. El OCR precarga la tabla de abajo -- revise y corrija cada celda antes de guardar."
+                   wrapText="true" styleClass="subtitle-label"/>
+            <HBox spacing="8" alignment="CENTER_LEFT">
+                <ComboBox fx:id="programaCombo" promptText="Programa" prefWidth="180"/>
+                <ComboBox fx:id="planCombo" promptText="Plan" prefWidth="150"/>
+                <ComboBox fx:id="cicloCombo" promptText="Ciclo" prefWidth="150"/>
+                <ComboBox fx:id="periodoCombo" promptText="Periodo" prefWidth="150"/>
+            </HBox>
+            <Label text="¿Que curso es cada columna del acta?" styleClass="field-label"/>
+            <ScrollPane fitToHeight="true" prefHeight="70">
+                <HBox fx:id="mapeoCursosBox" spacing="10"/>
+            </ScrollPane>
+        </VBox>
+    </top>
+    <left>
+        <VBox spacing="8" prefWidth="260">
+            <padding>
+                <Insets top="10" right="12" bottom="10" left="16"/>
+            </padding>
+            <Label text="Pagina(s) del acta" styleClass="field-label"/>
+            <HBox spacing="6">
+                <Button text="Agregar pagina" onAction="#onAgregarPagina"/>
+                <Button text="Rotar 90°" onAction="#onRotar"/>
+            </HBox>
+            <HBox spacing="6" alignment="CENTER_LEFT">
+                <Button text="◀" onAction="#onPaginaAnterior"/>
+                <Label fx:id="paginaLabel" text="Sin paginas"/>
+                <Button text="▶" onAction="#onPaginaSiguiente"/>
+            </HBox>
+            <ScrollPane prefHeight="420" fitToWidth="true">
+                <ImageView fx:id="previewImageView" fitWidth="230" preserveRatio="true"/>
+            </ScrollPane>
+            <Button fx:id="reconocerButton" text="Reconocer todas las paginas" onAction="#onReconocer" maxWidth="Infinity"/>
+            <Button text="Agregar fila" onAction="#onAgregarFila" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+    <center>
+        <TableView fx:id="tabla" editable="true"/>
+    </center>
+    <bottom>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="10" right="16" bottom="16" left="16"/>
+            </padding>
+            <TextArea fx:id="resultadoArea" editable="false" prefHeight="110" wrapText="true"/>
+            <HBox spacing="8" alignment="CENTER_RIGHT">
+                <Button text="Guardar" onAction="#onGuardar" defaultButton="true"/>
+                <Button text="Cerrar" onAction="#onCerrar"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

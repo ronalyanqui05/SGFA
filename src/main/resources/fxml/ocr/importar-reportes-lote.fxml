@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.ocr.ui.OcrReporteLoteController"
+            prefWidth="1250" prefHeight="760">
+    <top>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="16" right="16" bottom="8" left="16"/>
+            </padding>
+            <Label text="Importar un PDF con varios reportes de calificaciones (OCR)" styleClass="section-label"/>
+            <Label text="Cada hoja del PDF es el reporte de UN estudiante. Se leen todas y aparece la lista con el estado de cada una: LISTO (todo identificado y el promedio cuadra) o REVISAR (hay avisos). Las listas vienen marcadas; las dudosas se abren y se corrigen una por una. Nada se guarda hasta pulsar 'Guardar marcadas'."
+                   wrapText="true" styleClass="subtitle-label"/>
+            <HBox spacing="8" alignment="CENTER_LEFT">
+                <Button text="Elegir PDF" onAction="#onElegirPdf"/>
+                <Label fx:id="archivoLabel" styleClass="subtitle-label"/>
+                <Button fx:id="leerButton" text="Leer PDF" onAction="#onLeer"/>
+                <Button fx:id="cancelarButton" text="Cancelar" onAction="#onCancelar"/>
+                <ProgressBar fx:id="progreso" prefWidth="220" progress="0"/>
+                <Label fx:id="progresoLabel"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="6">
+            <padding>
+                <Insets top="4" right="16" bottom="4" left="16"/>
+            </padding>
+            <HBox spacing="8" alignment="CENTER_LEFT">
+                <Button text="Marcar las listas" onAction="#onMarcarListas"/>
+                <Button text="Desmarcar todas" onAction="#onDesmarcarTodas"/>
+                <Button text="Revisar la hoja seleccionada..." onAction="#onRevisar"/>
+                <Label fx:id="resumenLabel" styleClass="field-label"/>
+            </HBox>
+            <TableView fx:id="tabla" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="6" right="16" bottom="16" left="16"/>
+            </padding>
+            <TextArea fx:id="resultadoArea" editable="false" prefHeight="100" wrapText="true"/>
+            <HBox spacing="8" alignment="CENTER_RIGHT">
+                <Button fx:id="guardarButton" text="Guardar marcadas" onAction="#onGuardar" defaultButton="true"/>
+                <Button text="Cerrar" onAction="#onCerrar"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

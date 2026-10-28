@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="pe.edu.sgfa.programa.ui.PlanCursosTabController">
+    <padding>
+        <Insets top="12" right="12" bottom="12" left="12"/>
+    </padding>
+    <top>
+        <VBox spacing="8">
+            <HBox spacing="8" alignment="CENTER_LEFT">
+                <Label text="Programa:"/>
+                <ComboBox fx:id="programaCombo" prefWidth="220"/>
+                <Label text="Plan:"/>
+                <ComboBox fx:id="planCombo" prefWidth="220"/>
+                <Label text="Ciclo:"/>
+                <ComboBox fx:id="cicloCombo" prefWidth="180"/>
+            </HBox>
+            <HBox spacing="8" alignment="CENTER_LEFT">
+                <Label text="Curso a agregar:"/>
+                <ComboBox fx:id="cursoCombo" prefWidth="260"/>
+                <Label text="Orden:"/>
+                <TextField fx:id="ordenField" prefWidth="60"/>
+                <CheckBox fx:id="obligatorioCheck" text="Obligatorio" selected="true"/>
+                <Button text="Agregar" onAction="#onAgregar"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="tabla">
+            <columns>
+                <TableColumn fx:id="colCurso" text="Curso" prefWidth="260"/>
+                <TableColumn fx:id="colCreditos" text="Creditos" prefWidth="70"/>
+                <TableColumn fx:id="colOrden" text="Orden" prefWidth="60"/>
+                <TableColumn fx:id="colObligatorio" text="Obligatorio" prefWidth="90"/>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox spacing="8">
+            <padding>
+                <Insets top="12"/>
+            </padding>
+            <Button text="Quitar" onAction="#onQuitar"/>
+        </HBox>
+    </bottom>
+</BorderPane>
