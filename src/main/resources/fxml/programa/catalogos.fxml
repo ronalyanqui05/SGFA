@@ -5,7 +5,7 @@
 
 <TabPane xmlns="http://javafx.com/javafx"
          xmlns:fx="http://javafx.com/fxml"
-         fx:controller="pe.edu.sgfa.programa.ui.CatalogosController"
+         fx:controller="pe.edu.sgfa.programa.ui.RacaCatalogosController"
          fx:id="tabPane"
          tabClosingPolicy="UNAVAILABLE"
          prefWidth="860" prefHeight="580">

@@ -14,7 +14,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.importacion.ui.ImportacionController"
+            fx:controller="pe.edu.sgfa.importacion.ui.CphImportacionController"
             prefWidth="760" prefHeight="680">
     <center>
         <ScrollPane fitToWidth="true">
@@ -27,8 +27,8 @@
                     <Label text="Matricula masiva de estudiantes nuevos, sin notas todavia." wrapText="true"
                            styleClass="subtitle-label"/>
                     <HBox spacing="8">
-                        <Button text="Descargar plantilla" onAction="#onDescargarPlantillaEstudiantes"/>
-                        <Button text="Seleccionar archivo e importar" onAction="#onImportarEstudiantes"/>
+                        <Button text="Descargar plantilla" onAction="#cphOnDescargarPlantillaEstudiantes"/>
+                        <Button text="Seleccionar archivo e importar" onAction="#cphOnImportarEstudiantes"/>
                     </HBox>
                     <TextArea fx:id="resultadoEstudiantes" editable="false" prefHeight="150" wrapText="true"/>
                 </VBox>
@@ -37,8 +37,8 @@
                     <Label text="Notas de estudiantes ya matriculados, o migracion completa (crea al estudiante y su trayectoria si no existen). Programa, Plan, Ciclo, Curso, Periodo y Situacion deben estar configurados antes en Catalogos academicos."
                            wrapText="true" styleClass="subtitle-label"/>
                     <HBox spacing="8">
-                        <Button text="Descargar plantilla" onAction="#onDescargarPlantillaNotas"/>
-                        <Button text="Seleccionar archivo e importar" onAction="#onImportarNotas"/>
+                        <Button text="Descargar plantilla" onAction="#cphOnDescargarPlantillaNotas"/>
+                        <Button text="Seleccionar archivo e importar" onAction="#cphOnImportarNotas"/>
                     </HBox>
                     <TextArea fx:id="resultadoNotas" editable="false" prefHeight="150" wrapText="true"/>
                 </VBox>
@@ -50,9 +50,9 @@
                     <Label text="Se leen las tablas de la foto o escaneo y usted revisa/corrige antes de guardar. El reporte es de UN estudiante (cursos por nombre); el acta consolidada trae varios estudiantes y cursos por codigo."
                            wrapText="true" styleClass="subtitle-label"/>
                     <HBox spacing="8">
-                        <Button text="Importar reporte de calificaciones (1 estudiante, cursos por nombre)" onAction="#onImportarReporteOcr"/>
-                        <Button text="Importar PDF con varios reportes (1 hoja = 1 estudiante)" onAction="#onImportarReportesLoteOcr"/>
-                        <Button text="Importar acta consolidada (varios estudiantes/cursos)" onAction="#onImportarActaOcr"/>
+                        <Button text="Importar reporte de calificaciones (1 estudiante, cursos por nombre)" onAction="#cphOnImportarReporteOcr"/>
+                        <Button text="Importar PDF con varios reportes (1 hoja = 1 estudiante)" onAction="#cphOnImportarReportesLoteOcr"/>
+                        <Button text="Importar acta consolidada (varios estudiantes/cursos)" onAction="#cphOnImportarActaOcr"/>
                     </HBox>
 
                 </VBox>
@@ -64,7 +64,7 @@
             <padding>
                 <Insets top="12" right="16" bottom="16" left="16"/>
             </padding>
-            <Button text="Cerrar" onAction="#onCerrar"/>
+            <Button text="Cerrar" onAction="#cphOnCerrar"/>
         </HBox>
     </bottom>
 </BorderPane>

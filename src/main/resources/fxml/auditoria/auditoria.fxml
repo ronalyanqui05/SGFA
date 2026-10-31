@@ -13,7 +13,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.auditoria.ui.AuditoriaController"
+            fx:controller="pe.edu.sgfa.auditoria.ui.RahpAuditoriaController"
             prefWidth="960" prefHeight="620">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
@@ -30,8 +30,8 @@
             <ComboBox fx:id="accionCombo" prefWidth="150"/>
             <Label text="Entidad:"/>
             <ComboBox fx:id="entidadCombo" prefWidth="140"/>
-            <Button text="Buscar" onAction="#onBuscar" defaultButton="true"/>
-            <Button text="Limpiar" onAction="#onLimpiar"/>
+            <Button text="Buscar" onAction="#rahpOnBuscar" defaultButton="true"/>
+            <Button text="Limpiar" onAction="#rahpOnLimpiar"/>
         </HBox>
     </top>
     <center>
@@ -51,11 +51,11 @@
     </center>
     <bottom>
         <HBox spacing="8" alignment="CENTER_LEFT">
-            <Button fx:id="anteriorButton" text="Anterior" onAction="#onAnterior"/>
-            <Button fx:id="siguienteButton" text="Siguiente" onAction="#onSiguiente"/>
+            <Button fx:id="anteriorButton" text="Anterior" onAction="#rahpOnAnterior"/>
+            <Button fx:id="siguienteButton" text="Siguiente" onAction="#rahpOnSiguiente"/>
             <Label fx:id="paginaLabel"/>
             <Region HBox.hgrow="ALWAYS"/>
-            <Button text="Cerrar" onAction="#onCerrar"/>
+            <Button text="Cerrar" onAction="#rahpOnCerrar"/>
         </HBox>
     </bottom>
 </BorderPane>

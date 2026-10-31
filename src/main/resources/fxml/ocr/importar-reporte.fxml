@@ -16,7 +16,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.ocr.ui.OcrReporteController"
+            fx:controller="pe.edu.sgfa.ocr.ui.RahpOcrReporteController"
             prefWidth="1150" prefHeight="760">
     <top>
         <VBox spacing="8">
@@ -34,13 +34,13 @@
                 <Insets top="6" right="12" bottom="10" left="16"/>
             </padding>
             <HBox spacing="6">
-                <Button text="Elegir imagen" onAction="#onElegirImagen"/>
-                <Button text="Rotar 90°" onAction="#onRotar"/>
+                <Button text="Elegir imagen" onAction="#rahpOnElegirImagen"/>
+                <Button text="Rotar 90°" onAction="#rahpOnRotar"/>
             </HBox>
             <ScrollPane prefHeight="470" fitToWidth="true">
                 <ImageView fx:id="previewImageView" fitWidth="240" preserveRatio="true"/>
             </ScrollPane>
-            <Button fx:id="reconocerButton" text="Reconocer reporte" onAction="#onReconocer" maxWidth="Infinity"/>
+            <Button fx:id="reconocerButton" text="Reconocer reporte" onAction="#rahpOnReconocer" maxWidth="Infinity"/>
         </VBox>
     </left>
     <center>
@@ -77,9 +77,9 @@
             </padding>
             <TextArea fx:id="resultadoArea" editable="false" prefHeight="110" wrapText="true"/>
             <HBox spacing="8" alignment="CENTER_RIGHT">
-                <Button text="Agregar curso" onAction="#onAgregarFila"/>
-                <Button text="Guardar" onAction="#onGuardar" defaultButton="true"/>
-                <Button text="Cerrar" onAction="#onCerrar"/>
+                <Button text="Agregar curso" onAction="#rahpOnAgregarFila"/>
+                <Button text="Guardar" onAction="#rahpOnGuardar" defaultButton="true"/>
+                <Button text="Cerrar" onAction="#rahpOnCerrar"/>
             </HBox>
         </VBox>
     </bottom>

@@ -10,7 +10,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.reporte.ui.DocumentosEmitidosController"
+            fx:controller="pe.edu.sgfa.reporte.ui.CphDocumentosEmitidosController"
             prefWidth="1250" prefHeight="640">
     <top>
         <VBox spacing="8">
@@ -37,11 +37,11 @@
             </padding>
             <Label fx:id="estadoLabel" styleClass="subtitle-label"/>
             <HBox spacing="8" alignment="CENTER_RIGHT">
-                <Button text="Verificar documento..." onAction="#onVerificar"/>
-                <Button text="Abrir PDF" onAction="#onAbrir"/>
-                <Button fx:id="anularButton" text="Anular..." onAction="#onAnular"/>
-                <Button text="Actualizar" onAction="#onActualizar"/>
-                <Button text="Cerrar" onAction="#onCerrar"/>
+                <Button text="Verificar documento..." onAction="#cphOnVerificar"/>
+                <Button text="Abrir PDF" onAction="#cphOnAbrir"/>
+                <Button fx:id="anularButton" text="Anular..." onAction="#cphOnAnular"/>
+                <Button text="Actualizar" onAction="#cphOnActualizar"/>
+                <Button text="Cerrar" onAction="#cphOnCerrar"/>
             </HBox>
         </VBox>
     </bottom>

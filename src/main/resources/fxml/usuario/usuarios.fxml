@@ -10,7 +10,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.usuario.ui.UsuariosController"
+            fx:controller="pe.edu.sgfa.usuario.ui.RyeUsuariosController"
             prefWidth="640" prefHeight="420">
     <padding>
         <Insets top="16" right="16" bottom="16" left="16"/>
@@ -30,12 +30,12 @@
             <padding>
                 <Insets top="12"/>
             </padding>
-            <Button text="Nuevo" onAction="#onNuevo"/>
-            <Button text="Editar" onAction="#onEditar"/>
-            <Button text="Activar/Desactivar" onAction="#onToggleActivo"/>
-            <Button text="Cambiar contrasena" onAction="#onCambiarPassword"/>
+            <Button text="Nuevo" onAction="#ryeOnNuevo"/>
+            <Button text="Editar" onAction="#ryeOnEditar"/>
+            <Button text="Activar/Desactivar" onAction="#ryeOnToggleActivo"/>
+            <Button text="Cambiar contrasena" onAction="#ryeOnCambiarPassword"/>
             <Region HBox.hgrow="ALWAYS"/>
-            <Button text="Cerrar" onAction="#onCerrar"/>
+            <Button text="Cerrar" onAction="#ryeOnCerrar"/>
         </HBox>
     </bottom>
 </BorderPane>

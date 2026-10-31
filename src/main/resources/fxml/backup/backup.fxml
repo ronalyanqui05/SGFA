@@ -10,7 +10,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.backup.ui.BackupController"
+            fx:controller="pe.edu.sgfa.backup.ui.RahpBackupController"
             prefWidth="620" prefHeight="480">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
@@ -32,10 +32,10 @@
     </center>
     <bottom>
         <HBox spacing="8">
-            <Button text="Respaldar ahora" onAction="#onRespaldar" defaultButton="true"/>
-            <Button text="Restaurar seleccionado" onAction="#onRestaurarSeleccionado" styleClass="button-danger"/>
-            <Button text="Restaurar desde archivo..." onAction="#onRestaurarDesdeArchivo" styleClass="button-danger"/>
-            <Button text="Cerrar" onAction="#onCerrar"/>
+            <Button text="Respaldar ahora" onAction="#rahpOnRespaldar" defaultButton="true"/>
+            <Button text="Restaurar seleccionado" onAction="#rahpOnRestaurarSeleccionado" styleClass="button-danger"/>
+            <Button text="Restaurar desde archivo..." onAction="#rahpOnRestaurarDesdeArchivo" styleClass="button-danger"/>
+            <Button text="Cerrar" onAction="#rahpOnCerrar"/>
         </HBox>
     </bottom>
 </BorderPane>

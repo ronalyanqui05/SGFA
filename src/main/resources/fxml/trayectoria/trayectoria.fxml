@@ -11,7 +11,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.trayectoria.ui.TrayectoriaController"
+            fx:controller="pe.edu.sgfa.trayectoria.ui.YmclTrayectoriaController"
             prefWidth="820" prefHeight="520">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
@@ -37,13 +37,13 @@
             <padding>
                 <Insets top="12"/>
             </padding>
-            <Button text="Iniciar trayectoria" onAction="#onIniciar"/>
-            <Button text="Cambiar de plan" onAction="#onCambiarPlan"/>
-            <Button text="Finalizar" onAction="#onFinalizar"/>
-            <Button text="Retirar" onAction="#onRetirar"/>
-            <Button text="Editar (fila seleccionada)" onAction="#onEditar"/>
-            <Button text="Reactivar (fila seleccionada)" onAction="#onReactivar"/>
-            <Button text="Eliminar (fila seleccionada)" onAction="#onEliminar" styleClass="button-danger"/>
+            <Button text="Iniciar trayectoria" onAction="#ymclOnIniciar"/>
+            <Button text="Cambiar de plan" onAction="#ymclOnCambiarPlan"/>
+            <Button text="Finalizar" onAction="#ymclOnFinalizar"/>
+            <Button text="Retirar" onAction="#ymclOnRetirar"/>
+            <Button text="Editar (fila seleccionada)" onAction="#ymclOnEditar"/>
+            <Button text="Reactivar (fila seleccionada)" onAction="#ymclOnReactivar"/>
+            <Button text="Eliminar (fila seleccionada)" onAction="#ymclOnEliminar" styleClass="button-danger"/>
         </FlowPane>
     </bottom>
 </BorderPane>

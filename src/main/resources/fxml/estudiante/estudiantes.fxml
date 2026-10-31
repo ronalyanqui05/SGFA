@@ -12,7 +12,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.estudiante.ui.EstudiantesController"
+            fx:controller="pe.edu.sgfa.estudiante.ui.YmclEstudiantesController"
             prefWidth="820" prefHeight="560">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
@@ -21,8 +21,8 @@
         <HBox spacing="8" alignment="CENTER_LEFT">
             <Label text="Buscar:"/>
             <TextField fx:id="busquedaField" prefWidth="340" promptText="DNI, codigo, nombres o apellidos (se filtra al escribir)"/>
-            <Button text="Buscar" onAction="#onBuscar" defaultButton="true"/>
-            <Button text="Mostrar todos" onAction="#onMostrarTodos"/>
+            <Button text="Buscar" onAction="#ymclOnBuscar" defaultButton="true"/>
+            <Button text="Mostrar todos" onAction="#ymclOnMostrarTodos"/>
             <CheckBox fx:id="incluirInactivosCheck" text="Incluir inactivos"/>
         </HBox>
     </top>
@@ -41,13 +41,13 @@
             <padding>
                 <Insets top="12"/>
             </padding>
-            <Button text="Nuevo" onAction="#onNuevo"/>
-            <Button text="Editar" onAction="#onEditar"/>
-            <Button text="Inactivar/Reactivar" onAction="#onToggleEstado"/>
-            <Button text="Trayectoria" onAction="#onTrayectoria"/>
-            <Button text="Registrar notas" onAction="#onRegistrarNotas"/>
-            <Button text="Generar ficha" onAction="#onGenerarFicha"/>
-            <Button text="Historial de fichas" onAction="#onHistorialFichas"/>
+            <Button text="Nuevo" onAction="#ymclOnNuevo"/>
+            <Button text="Editar" onAction="#ymclOnEditar"/>
+            <Button text="Inactivar/Reactivar" onAction="#ymclOnToggleEstado"/>
+            <Button text="Trayectoria" onAction="#ymclOnTrayectoria"/>
+            <Button text="Registrar notas" onAction="#ymclOnRegistrarNotas"/>
+            <Button text="Generar ficha" onAction="#ymclOnGenerarFicha"/>
+            <Button text="Historial de fichas" onAction="#ymclOnHistorialFichas"/>
         </HBox>
     </bottom>
 </BorderPane>

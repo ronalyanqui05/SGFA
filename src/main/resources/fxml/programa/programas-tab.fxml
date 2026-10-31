@@ -9,7 +9,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.programa.ui.ProgramasTabController">
+            fx:controller="pe.edu.sgfa.programa.ui.RacaProgramasTabController">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
     </padding>
@@ -28,9 +28,9 @@
             <padding>
                 <Insets top="12"/>
             </padding>
-            <Button text="Nuevo" onAction="#onNuevo"/>
-            <Button text="Editar" onAction="#onEditar"/>
-            <Button text="Activar/Desactivar" onAction="#onToggleActivo"/>
+            <Button text="Nuevo" onAction="#racaOnNuevo"/>
+            <Button text="Editar" onAction="#racaOnEditar"/>
+            <Button text="Activar/Desactivar" onAction="#racaOnToggleActivo"/>
         </HBox>
     </bottom>
 </BorderPane>

@@ -14,7 +14,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.reporte.ui.ReportesController"
+            fx:controller="pe.edu.sgfa.reporte.ui.CphReportesController"
             prefWidth="1250" prefHeight="760">
     <top>
         <VBox spacing="8">
@@ -50,7 +50,7 @@
                 </VBox>
                 <VBox spacing="2">
                     <Label text=" "/>
-                    <Button fx:id="generarButton" text="Generar" onAction="#onGenerar" defaultButton="true"/>
+                    <Button fx:id="generarButton" text="Generar" onAction="#cphOnGenerar" defaultButton="true"/>
                 </VBox>
             </FlowPane>
             <HBox fx:id="opcionesMeritoBox" spacing="10" alignment="CENTER_LEFT">
@@ -81,12 +81,12 @@
             </padding>
             <Label fx:id="estadoLabel" styleClass="subtitle-label" wrapText="true"/>
             <HBox spacing="8" alignment="CENTER_RIGHT">
-                <Button text="Documentos emitidos" onAction="#onDocumentosEmitidos"/>
-                <Button fx:id="vistaPreviaButton" text="Vista previa" onAction="#onVistaPrevia"/>
-                <Button fx:id="oficialButton" text="Emitir version oficial (para firma)" onAction="#onEmitirOficial"/>
-                <Button fx:id="excelButton" text="Exportar a Excel" onAction="#onExportarExcel"/>
-                <Button fx:id="pdfButton" text="Exportar a PDF (interno)" onAction="#onExportarPdf"/>
-                <Button text="Cerrar" onAction="#onCerrar"/>
+                <Button text="Documentos emitidos" onAction="#cphOnDocumentosEmitidos"/>
+                <Button fx:id="vistaPreviaButton" text="Vista previa" onAction="#cphOnVistaPrevia"/>
+                <Button fx:id="oficialButton" text="Emitir version oficial (para firma)" onAction="#cphOnEmitirOficial"/>
+                <Button fx:id="excelButton" text="Exportar a Excel" onAction="#cphOnExportarExcel"/>
+                <Button fx:id="pdfButton" text="Exportar a PDF (interno)" onAction="#cphOnExportarPdf"/>
+                <Button text="Cerrar" onAction="#cphOnCerrar"/>
             </HBox>
         </VBox>
     </bottom>

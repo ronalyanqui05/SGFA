@@ -12,7 +12,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.ocr.ui.OcrReporteLoteController"
+            fx:controller="pe.edu.sgfa.ocr.ui.RahpOcrReporteLoteController"
             prefWidth="1250" prefHeight="760">
     <top>
         <VBox spacing="8">
@@ -23,10 +23,10 @@
             <Label text="Cada hoja del PDF es el reporte de UN estudiante. Se leen todas y aparece la lista con el estado de cada una: LISTO (todo identificado y el promedio cuadra) o REVISAR (hay avisos). Las listas vienen marcadas; las dudosas se abren y se corrigen una por una. Nada se guarda hasta pulsar 'Guardar marcadas'."
                    wrapText="true" styleClass="subtitle-label"/>
             <HBox spacing="8" alignment="CENTER_LEFT">
-                <Button text="Elegir PDF" onAction="#onElegirPdf"/>
+                <Button text="Elegir PDF" onAction="#rahpOnElegirPdf"/>
                 <Label fx:id="archivoLabel" styleClass="subtitle-label"/>
-                <Button fx:id="leerButton" text="Leer PDF" onAction="#onLeer"/>
-                <Button fx:id="cancelarButton" text="Cancelar" onAction="#onCancelar"/>
+                <Button fx:id="leerButton" text="Leer PDF" onAction="#rahpOnLeer"/>
+                <Button fx:id="cancelarButton" text="Cancelar" onAction="#rahpOnCancelar"/>
                 <ProgressBar fx:id="progreso" prefWidth="220" progress="0"/>
                 <Label fx:id="progresoLabel"/>
             </HBox>
@@ -38,9 +38,9 @@
                 <Insets top="4" right="16" bottom="4" left="16"/>
             </padding>
             <HBox spacing="8" alignment="CENTER_LEFT">
-                <Button text="Marcar las listas" onAction="#onMarcarListas"/>
-                <Button text="Desmarcar todas" onAction="#onDesmarcarTodas"/>
-                <Button text="Revisar la hoja seleccionada..." onAction="#onRevisar"/>
+                <Button text="Marcar las listas" onAction="#rahpOnMarcarListas"/>
+                <Button text="Desmarcar todas" onAction="#rahpOnDesmarcarTodas"/>
+                <Button text="Revisar la hoja seleccionada..." onAction="#rahpOnRevisar"/>
                 <Label fx:id="resumenLabel" styleClass="field-label"/>
             </HBox>
             <TableView fx:id="tabla" VBox.vgrow="ALWAYS"/>
@@ -53,8 +53,8 @@
             </padding>
             <TextArea fx:id="resultadoArea" editable="false" prefHeight="100" wrapText="true"/>
             <HBox spacing="8" alignment="CENTER_RIGHT">
-                <Button fx:id="guardarButton" text="Guardar marcadas" onAction="#onGuardar" defaultButton="true"/>
-                <Button text="Cerrar" onAction="#onCerrar"/>
+                <Button fx:id="guardarButton" text="Guardar marcadas" onAction="#rahpOnGuardar" defaultButton="true"/>
+                <Button text="Cerrar" onAction="#rahpOnCerrar"/>
             </HBox>
         </VBox>
     </bottom>

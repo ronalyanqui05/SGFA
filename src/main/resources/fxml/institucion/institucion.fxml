@@ -12,7 +12,7 @@
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="pe.edu.sgfa.institucion.ui.InstitucionController"
+      fx:controller="pe.edu.sgfa.institucion.ui.RacaInstitucionController"
       spacing="16"
       prefWidth="520" prefHeight="480">
     <padding>
@@ -23,7 +23,7 @@
 
     <HBox spacing="16" alignment="CENTER_LEFT">
         <ImageView fx:id="logoPreview" fitWidth="96" fitHeight="96" preserveRatio="true"/>
-        <Button text="Cambiar logo" onAction="#onCambiarLogo"/>
+        <Button text="Cambiar logo" onAction="#racaOnCambiarLogo"/>
     </HBox>
 
     <HBox spacing="16" alignment="CENTER_LEFT">
@@ -31,8 +31,8 @@
         <VBox spacing="4">
             <Label text="Fondo de la pantalla de inicio" styleClass="field-label"/>
             <HBox spacing="8">
-                <Button text="Cargar fondo" onAction="#onCambiarFondo"/>
-                <Button text="Quitar fondo" onAction="#onQuitarFondo"/>
+                <Button text="Cargar fondo" onAction="#racaOnCambiarFondo"/>
+                <Button text="Quitar fondo" onAction="#racaOnQuitarFondo"/>
             </HBox>
         </VBox>
     </HBox>
@@ -55,7 +55,7 @@
     </GridPane>
 
     <HBox spacing="8">
-        <Button text="Guardar" defaultButton="true" onAction="#onGuardar"/>
-        <Button text="Cerrar" onAction="#onCerrar"/>
+        <Button text="Guardar" defaultButton="true" onAction="#racaOnGuardar"/>
+        <Button text="Cerrar" onAction="#racaOnCerrar"/>
     </HBox>
 </VBox>

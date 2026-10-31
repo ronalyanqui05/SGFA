@@ -32,7 +32,7 @@ $appVersion = "0.1.0"
 $appName = "SGFA"
 $vendor = "RYCRR"
 $description = "Sistema de Gestion de Fichas Academicas"
-$mainClass = "pe.edu.sgfa.Launcher"
+$mainClass = "pe.edu.sgfa.RyeLauncher"
 
 Write-Host "== 1/4: mvnw clean package ==" -ForegroundColor Cyan
 $mvnArgs = @("-q", "clean", "package")

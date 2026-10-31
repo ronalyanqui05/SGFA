@@ -14,7 +14,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.programa.ui.PlanCursosTabController">
+            fx:controller="pe.edu.sgfa.programa.ui.RacaPlanCursosTabController">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
     </padding>
@@ -34,7 +34,7 @@
                 <Label text="Orden:"/>
                 <TextField fx:id="ordenField" prefWidth="60"/>
                 <CheckBox fx:id="obligatorioCheck" text="Obligatorio" selected="true"/>
-                <Button text="Agregar" onAction="#onAgregar"/>
+                <Button text="Agregar" onAction="#racaOnAgregar"/>
             </HBox>
         </VBox>
     </top>
@@ -53,7 +53,7 @@
             <padding>
                 <Insets top="12"/>
             </padding>
-            <Button text="Quitar" onAction="#onQuitar"/>
+            <Button text="Quitar" onAction="#racaOnQuitar"/>
         </HBox>
     </bottom>
 </BorderPane>

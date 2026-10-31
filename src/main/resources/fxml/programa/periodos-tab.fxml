@@ -9,7 +9,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.periodo.ui.PeriodosTabController">
+            fx:controller="pe.edu.sgfa.periodo.ui.YmclPeriodosTabController">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
     </padding>
@@ -29,9 +29,9 @@
             <padding>
                 <Insets top="12"/>
             </padding>
-            <Button text="Nuevo" onAction="#onNuevo"/>
-            <Button text="Editar" onAction="#onEditar"/>
-            <Button text="Cerrar periodo" onAction="#onCerrar"/>
+            <Button text="Nuevo" onAction="#ymclOnNuevo"/>
+            <Button text="Editar" onAction="#ymclOnEditar"/>
+            <Button text="Cerrar periodo" onAction="#ymclOnCerrar"/>
         </HBox>
     </bottom>
 </BorderPane>

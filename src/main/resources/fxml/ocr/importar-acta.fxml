@@ -14,7 +14,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.ocr.ui.OcrActaController"
+            fx:controller="pe.edu.sgfa.ocr.ui.RahpOcrActaController"
             prefWidth="1100" prefHeight="720">
     <top>
         <VBox spacing="10">
@@ -43,19 +43,19 @@
             </padding>
             <Label text="Pagina(s) del acta" styleClass="field-label"/>
             <HBox spacing="6">
-                <Button text="Agregar pagina" onAction="#onAgregarPagina"/>
-                <Button text="Rotar 90°" onAction="#onRotar"/>
+                <Button text="Agregar pagina" onAction="#rahpOnAgregarPagina"/>
+                <Button text="Rotar 90°" onAction="#rahpOnRotar"/>
             </HBox>
             <HBox spacing="6" alignment="CENTER_LEFT">
-                <Button text="◀" onAction="#onPaginaAnterior"/>
+                <Button text="◀" onAction="#rahpOnPaginaAnterior"/>
                 <Label fx:id="paginaLabel" text="Sin paginas"/>
-                <Button text="▶" onAction="#onPaginaSiguiente"/>
+                <Button text="▶" onAction="#rahpOnPaginaSiguiente"/>
             </HBox>
             <ScrollPane prefHeight="420" fitToWidth="true">
                 <ImageView fx:id="previewImageView" fitWidth="230" preserveRatio="true"/>
             </ScrollPane>
-            <Button fx:id="reconocerButton" text="Reconocer todas las paginas" onAction="#onReconocer" maxWidth="Infinity"/>
-            <Button text="Agregar fila" onAction="#onAgregarFila" maxWidth="Infinity"/>
+            <Button fx:id="reconocerButton" text="Reconocer todas las paginas" onAction="#rahpOnReconocer" maxWidth="Infinity"/>
+            <Button text="Agregar fila" onAction="#rahpOnAgregarFila" maxWidth="Infinity"/>
         </VBox>
     </left>
     <center>
@@ -68,8 +68,8 @@
             </padding>
             <TextArea fx:id="resultadoArea" editable="false" prefHeight="110" wrapText="true"/>
             <HBox spacing="8" alignment="CENTER_RIGHT">
-                <Button text="Guardar" onAction="#onGuardar" defaultButton="true"/>
-                <Button text="Cerrar" onAction="#onCerrar"/>
+                <Button text="Guardar" onAction="#rahpOnGuardar" defaultButton="true"/>
+                <Button text="Cerrar" onAction="#rahpOnCerrar"/>
             </HBox>
         </VBox>
     </bottom>

@@ -5,11 +5,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import pe.edu.sgfa.shell.VisorPdf?>
+<?import pe.edu.sgfa.shell.RyeVisorPdf?>
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.reporte.ui.VistaPreviaPdfController"
+            fx:controller="pe.edu.sgfa.reporte.ui.CphVistaPreviaPdfController"
             prefWidth="1000" prefHeight="720">
     <top>
         <Label text="Use la barra para paginar, hacer zoom (tambien Ctrl + rueda del raton), imprimir (Ctrl+P) o guardar una copia (Ctrl+S)."
@@ -20,14 +20,14 @@
         </Label>
     </top>
     <center>
-        <VisorPdf fx:id="visor"/>
+        <RyeVisorPdf fx:id="visor"/>
     </center>
     <bottom>
         <HBox alignment="CENTER_RIGHT" spacing="8">
             <padding>
                 <Insets top="8" right="12" bottom="8" left="12"/>
             </padding>
-            <Button text="Cerrar" onAction="#onCerrar"/>
+            <Button text="Cerrar" onAction="#cphOnCerrar"/>
         </HBox>
     </bottom>
 </BorderPane>

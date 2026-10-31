@@ -12,7 +12,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.nota.ui.RegistroNotasController"
+            fx:controller="pe.edu.sgfa.nota.ui.YmclRegistroNotasController"
             prefWidth="820" prefHeight="580">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
@@ -49,7 +49,7 @@
             </padding>
             <Label fx:id="totalesLabel"/>
             <HBox spacing="8">
-                <Button text="Guardar" onAction="#onGuardar"/>
+                <Button text="Guardar" onAction="#ymclOnGuardar"/>
             </HBox>
         </VBox>
     </bottom>

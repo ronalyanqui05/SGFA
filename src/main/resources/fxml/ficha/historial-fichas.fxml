@@ -10,7 +10,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.ficha.ui.HistorialFichasController"
+            fx:controller="pe.edu.sgfa.ficha.ui.RacaHistorialFichasController"
             prefWidth="760" prefHeight="480">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
@@ -34,9 +34,9 @@
             <padding>
                 <Insets top="12"/>
             </padding>
-            <Button text="Ver" onAction="#onVer"/>
-            <Button fx:id="botonAnular" text="Anular" onAction="#onAnular" styleClass="button-danger"/>
-            <Button text="Cerrar" onAction="#onCerrar"/>
+            <Button text="Ver" onAction="#racaOnVer"/>
+            <Button fx:id="botonAnular" text="Anular" onAction="#racaOnAnular" styleClass="button-danger"/>
+            <Button text="Cerrar" onAction="#racaOnCerrar"/>
         </HBox>
     </bottom>
 </BorderPane>

@@ -11,7 +11,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="pe.edu.sgfa.programa.ui.PlanesTabController">
+            fx:controller="pe.edu.sgfa.programa.ui.RacaPlanesTabController">
     <padding>
         <Insets top="12" right="12" bottom="12" left="12"/>
     </padding>
@@ -36,11 +36,11 @@
             <padding>
                 <Insets top="12"/>
             </padding>
-            <Button text="Nuevo" onAction="#onNuevo"/>
-            <Button text="Editar" onAction="#onEditar"/>
-            <Button text="Abrir / Activar plan" onAction="#onAbrir"/>
-            <Button text="Cerrar plan" onAction="#onCerrar"/>
-            <Button text="Eliminar" onAction="#onEliminar" styleClass="button-danger"/>
+            <Button text="Nuevo" onAction="#racaOnNuevo"/>
+            <Button text="Editar" onAction="#racaOnEditar"/>
+            <Button text="Abrir / Activar plan" onAction="#racaOnAbrir"/>
+            <Button text="Cerrar plan" onAction="#racaOnCerrar"/>
+            <Button text="Eliminar" onAction="#racaOnEliminar" styleClass="button-danger"/>
         </HBox>
     </bottom>
 </BorderPane>

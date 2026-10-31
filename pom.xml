@@ -29,7 +29,7 @@
     <poi.version>5.3.0</poi.version>
     <tess4j.version>5.11.0</tess4j.version>
     <pdfbox.version>2.0.31</pdfbox.version>
-    <sgfa.mainClass>pe.edu.sgfa.Launcher</sgfa.mainClass>
+    <sgfa.mainClass>pe.edu.sgfa.RyeLauncher</sgfa.mainClass>
   </properties>
 
   <dependencies>
